@@ -7,20 +7,18 @@
 package main
 
 import (
-  "fmt"
+	"fmt"
 )
 
+// Sqrt function: Encuentra la raiz cuadrada segun el Método de Newton
 func Sqrt(x float64) float64 {
-  z:= 1.0
-  for i:= 0; i < 10; i++{
-
-    z = z - (z*z - x) / (2 * z)
-
-  }
-  return z
+	z := 1.0
+	for i := 0; i < 10; i++ {
+		z = z - (z*z-x)/(2*z)
+	}
+	return z
 }
 
-
 func main() {
-  fmt.Println(Sqrt(2))
+	fmt.Println(Sqrt(2))
 }
